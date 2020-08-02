@@ -1,0 +1,40 @@
+
+<div>
+    <h1>Book List</h1>
+    <div>
+        <button type="button" (click)="addBook()" >Add new book</button>
+    </div><br />
+    <table >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Book ISBN</th>
+                <th>Title</th>                
+                <th>Author</th>                            
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>No. of Pages</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let book of books">
+                <td>{{book.id}}</td>
+                <td>{{book.code}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.publisher}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.pages}}</td>
+                <td>
+                    <button type="button" (click)="editBook(book)">Edit</button>
+                    <button type="button" (click)="deleteBook(book)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+<div> 
+    <a routerLink="/" routerLinkActive="active"> Go To Home page</a>    
+</div>

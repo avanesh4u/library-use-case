@@ -1,0 +1,29 @@
+
+<div>
+    <h1>Library List</h1>   
+    <br />
+    <table >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Library name</th>
+                <th>Discription</th>                
+                <th>Location</th>      
+                <th>Action</th>                                        
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let library of libraries">
+                <td>{{library.id}}</td>
+                <td>{{library.name}}</td>
+                <td>{{library.discription}}</td>
+                <td>{{library.location}}</td>
+                <td>
+                    <button type="button" (click)="goToBookStore(library)">Go To Store</button>
+                  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

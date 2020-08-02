@@ -1,0 +1,23 @@
+table {
+    border: 1px;
+    background-color: #87898a;
+    color: white;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){
+      background-color: #e99e9e
+    }
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button {
+    background-color: #eef0ee;
+  
+  }

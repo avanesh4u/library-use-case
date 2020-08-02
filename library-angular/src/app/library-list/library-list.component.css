@@ -1,0 +1,14 @@
+table {
+    width: 150%;
+    border: 2px solid #000000;
+  }
+  
+  table > tbody > tr > td {
+    line-height: 1.42857143;
+    border: 1px solid #000000;
+  }
+  
+  table .text-container {
+    word-wrap: break-word;
+    word-break: break-all;
+  }

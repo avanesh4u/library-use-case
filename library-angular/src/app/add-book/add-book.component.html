@@ -1,0 +1,50 @@
+
+
+<h1>Add New Book</h1>
+<form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="isbn" >ISBN Code:</label><div class="spacer"></div>
+      <input type="text" style="height: 1.5rem;" formControlName="code" placeholder="code" name="code" class="form-control" id="code" [ngClass]="{ 'is-invalid': submitted && f.code.errors }"/>
+    </div>
+    <div *ngIf="submitted && f.code.errors" style="color: red;">
+      <div *ngIf="f.code.errors.required">
+        ISBN Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="isbn">Title:</label><div class="spacer"></div>
+        <input type="text" style="height: 1.5rem;" formControlName="title" placeholder="title" name="title" class="form-control" id="title">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label><div class="spacer"></div>
+        <input type="text" style="height: 1.5rem;" formControlName="author" placeholder="author" name="author" class="form-control" id="author">
+      </div>
+
+      <div class="form-group">
+        <label for="publisher">Publisher:</label><div class="spacer"></div>
+        <input type="text" style="height: 1.5rem;" formControlName="publisher" placeholder="publisher" name="publisher" class="form-control" id="publisher">
+      </div>
+
+      <div class="form-group">
+        <label for="pages">Pages:</label><div class="spacer"></div>
+        <input type="text" style="height: 1.5rem;" formControlName="pages" placeholder="pages" name="pages" class="form-control" id="pages">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price:</label><div class="spacer"></div>
+        <input type="text" style="height: 1.5rem;" formControlName="price" placeholder="price" name="price" class="form-control" id="price">
+      </div><br />
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+<div [hidden]="!submitted">
+  <h4>New Book added successfully!</h4>
+  <a routerLink="/book-list" routerLinkActive="active"> Book List Page</a>
+</div>
+<div>
+  <a routerLink="/" routerLinkActive="active"> Go To Home page</a>
+</div>
